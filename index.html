@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TP3 - formulaire accessible</title>
     <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -23,8 +24,7 @@
     <main>
         <section>
             <h1>Concours</h1>
-            <p>Complétez le coupon de participation et répondez à la question du jour cidessous.
-                30 finalistes</p>
+            <p>Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
             <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
                 Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
                 les finalistes présents, un grand gagnant s’envolera vers la destination de
@@ -149,28 +149,115 @@
                 <p>Le code postal doit respecter le format X1X 1X1.</p>
                 <p>
                     <label for="courriel">Courriel</label>
-                    <input type="email" name="courriel" id="courriel" required/>
+                    <input type="email" name="courriel" id="courriel" required />
                 </p>
                 <p>Le courriel est obligatoire.</p>
                 <p>Attention, le courriel comporte un ou plusieurs caractères interdits.</p>
+                <fieldset>
+                    <legend>Téléphone (indicatif - numéro)</legend>
+                    <p>
+                        <label for="indicatif">Indicatif</label>
+                        <input type="number" name="indicatif" id="indicatif" required />
+                    </p>
+                    <p>
+                        <label for="numero">Numéro</label>
+                        <input type="number" name="numero" id="numero" required />
+                    </p>
+                    <p>Veuillez préciser votre indicatif régional dans le premier champ de saisie.</p>
+                    <p>Veuillez préciser les 7 chiffres de votre numéro de téléphone dans le second champ de saisie.</p>
+                    <p>Attention, le numéro de téléphone ne doit pas comporter d’espace ou de trait d’union.</p>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <h2>Question du jour</h2>
+                    </legend>
+                    <fieldset>
+                        <legend>Date à laquelle la question a été posée?</legend>
+                        <p>
+                            <label for="jour">JOUR</label>
+                            <input type="number" name="jour" id="jour" required />
+                        </p>
+                        <p>
+                            <label for="mois">MOIS</label>
+                            <select name="listeMois" id="mois" required>
+                                <option value="" selected = "selected">Sélectionner</option>
+                                <option value="JA">Janvier</option>
+                                <option value="FE">Février</option>
+                                <option value="MR">Mars</option>
+                                <option value="AV">Avril</option>
+                                <option value="MA">Mai</option>
+                                <option value="JN">Juin</option>
+                                <option value="JL">Juillet</option>
+                                <option value="AU">Août</option>
+                                <option value="SE">Septembre</option>
+                                <option value="OC">Octobre</option>
+                                <option value="NO">Novembre</option>
+                                <option value="DE">Décembre</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="annee">ANNÉE</label>
+                            <input type="number" name="annee" id="annee" required />
+                        </p>
+                        <p>SVP, entrez la date complète.</p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Lequel de ces monuments est un mausolée?</legend>
+                        <p>
+                           <ul>
+                               <li>
+                                   <picture>
+                                    <source media="max-width:600px" srcset="images/chateaudIf-small.jpg">
+                                    <source media="min-width:601px" srcset="images/chateaudIf.jpg">
+                                    <img src="images/chateaudIf.jpg" alt="">
+                                   </picture>
+                                   <input type="radio" name="monument" id="chateauIf" value="chateauIf">
+                                   <label for="chateauIf">Le château d'If</label>
+                               </li>
+                               <li>
+                                <picture>
+                                 <source media="max-width:600px" srcset="images/palaisluxembourg-small.jpg">
+                                 <source media="min-width:601px" srcset="images/palaisluxembourg.jpg">
+                                 <img src="images/palaisluxembourg.jpg" alt="">
+                                </picture>
+                                <input type="radio" name="monument" id="palaisLuxembourg" value="palaisLuxembourg">
+                                <label for="palaisLuxembourg">Le palais du Luxembourg</label>
+                            </li>
+                            <li>
+                                <picture>
+                                 <source media="max-width:600px" srcset="images/tajmahal-small.jpg">
+                                 <source media="min-width:601px" srcset="images/tajmahal.jpg">
+                                 <img src="images/tajmahal.jpg" alt="">
+                                </picture>
+                                <input type="radio" name="monument" id="tajmahal" value="tajmahal">
+                                <label for="tajmahal">Le Taj Mahal</label>
+                            </li>
+                           </ul> 
+                        </p>
+                        <p>Veuillez répondre à la question du jour</p>
+                    </fieldset>
+                </fieldset>
             </fieldset>
-            <fieldset>
-                <legend>Téléphone (indicatif - numéro)</legend>
-                <p>
-                    <label for="indicatif">Indicatif</label>
-                    <input type="number" name="indicatif" id="indicatif" required/>
-                </p>
-                <p>
-                    <label for="numero">Numéro</label>
-                    <input type="number" name="numero" id="numero" required/>
-                </p>
-                <p>Veuillez préciser votre indicatif régional dans le premier champ de saisie.</p>
-                <p>Veuillez préciser les 7 chiffres de votre numéro de téléphone dans le second champ de saisie.</p>
-                <p>Attention, le numéro de téléphone ne doit pas comporter d’espace ou de trait d’union.</p>
-            </fieldset>
+            <p>
+                <input type="checkbox" name="accepteReglement" id="accepteReglement" required />
+                <label for="accepteReglement">J'ai lu et j'accepte le <a href="pdf/Reglements-Voyage-De-Reve-Au-Menu.pdf">règlement du concours</a> et je confirme avoir atteint l’âge de majorité dans ma province de résidence.</label>
+            </p>
+            <p>SVP, acceptez le règlement du concours</p>
+            <p>
+                <input type="checkbox" name="documentation" id="documentation">
+                <label for="documentation">Oui, j’accepte de recevoir de la documentation de Radio-Canada.</label>
+            </p>
+            <button name="Soumettre" value="Soumettre">
+                Soumettre le formulaire
+            </button>
         </form>
-
     </main>
+    <footer>
+        <p>
+            <small>© 2021, Andréanne Archambault.</small>
+        </p>
+        <p>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</p>
+    </footer>
 </body>
 
 </html>
