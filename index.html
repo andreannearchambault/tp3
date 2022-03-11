@@ -43,12 +43,12 @@
                     </legend>
                     <p>
                         <label for="prenom">Prénom</label>
-                        <input type="text" name="prenom" id="prenom" required />
+                        <input type="text" name="prenom" id="prenom" pattern="[a-zA-ZÀ-ÿ \-]+" required />
                     </p>
                     <p>Le prénom est obligatoire.</p>
                     <p>
                         <label for="nom">Nom</label>
-                        <input type="text" name="nom" id="nom" required />
+                        <input type="text" name="nom" id="nom" pattern="[a-zA-ZÀ-ÿ \-]+" required />
 
                     </p>
                     <p>Le nom de famille est obligatoire.</p>
@@ -143,7 +143,7 @@
                 <p>La province ou l’état d’origine doit être précisé.</p>
                 <p>
                     <label for="codePostal">Code postal (X1X 1X1)</label>
-                    <input type="text" name="codePostal" id="codePostal" required />
+                    <input type="text" name="codePostal" id="codePostal" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" pattern ="(\d{5}([\-]\d{4})?)" required />
                 </p>
                 <p>Le code postal est requis.</p>
                 <p>Le code postal doit respecter le format X1X 1X1.</p>
@@ -157,11 +157,11 @@
                     <legend>Téléphone (indicatif - numéro)</legend>
                     <p>
                         <label for="indicatif">Indicatif</label>
-                        <input type="number" name="indicatif" id="indicatif" required />
+                        <input type="text" name="indicatif" id="indicatif" pattern="[0-9][0-9][0-9]" minlength="3" maxlength="3" required />
                     </p>
                     <p>
                         <label for="numero">Numéro</label>
-                        <input type="number" name="numero" id="numero" required />
+                        <input type="text" name="numero" id="numero" pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9]" minlength="7" maxlength="7" required />
                     </p>
                     <p>Veuillez préciser votre indicatif régional dans le premier champ de saisie.</p>
                     <p>Veuillez préciser les 7 chiffres de votre numéro de téléphone dans le second champ de saisie.</p>
@@ -175,7 +175,7 @@
                         <legend>Date à laquelle la question a été posée?</legend>
                         <p>
                             <label for="jour">JOUR</label>
-                            <input type="number" name="jour" id="jour" required />
+                            <input type="number" name="jour" id="jour" min="1" max="31" maxlength="2" required />
                         </p>
                         <p>
                             <label for="mois">MOIS</label>
@@ -197,7 +197,7 @@
                         </p>
                         <p>
                             <label for="annee">ANNÉE</label>
-                            <input type="number" name="annee" id="annee" required />
+                            <input type="number" name="annee" id="annee" min="1000" max="9999" required />
                         </p>
                         <p>SVP, entrez la date complète.</p>
                     </fieldset>
@@ -211,7 +211,7 @@
                                     <source media="min-width:601px" srcset="images/chateaudIf.jpg">
                                     <img src="images/chateaudIf.jpg" alt="">
                                    </picture>
-                                   <input type="radio" name="monument" id="chateauIf" value="chateauIf">
+                                   <input type="radio" name="monument" id="chateauIf" value="chateauIf" required>
                                    <label for="chateauIf">Le château d'If</label>
                                </li>
                                <li>
