@@ -14,8 +14,8 @@
     <div class="conteneur">
         <header class="entete">
             <picture>
-                <source media="max-width:600px" srcset="images/bandeau_600.jpg">
-                <source media="min-width:601px" srcset="images/bandeau_1200.jpg">
+                <source media="(max-width:600px)" srcset="images/bandeau_600.jpg">
+                <source media="(min-width:601px)" srcset="images/bandeau_1200.jpg">
                 <img src="images/bandeau_1200.jpg" alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le
             Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit
             voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière,
@@ -230,11 +230,11 @@
                         <legend>Date à laquelle la question a été posée?</legend>
                         <div class="rangee">
                             <p class="jour cols_4_de_12">
-                                <label for="jour">JOUR</label>
+                                <label for="jour">Jour</label>
                                 <input type="number" name="jour" id="jour" min="1" max="31" required />
                             </p>
                             <p class="mois cols_4_de_12">
-                                <label for="mois">MOIS</label>
+                                <label for="mois">Mois</label>
                                 <select name="listeMois" id="mois" required>
                                     <option value="" selected="selected">Sélectionner</option>
                                     <option value="JA">Janvier</option>
@@ -252,7 +252,7 @@
                                 </select>
                             </p>
                             <p class="annee cols_4_de_12">
-                                <label for="annee">ANNÉE</label>
+                                <label for="annee">Année</label>
                                 <input type="number" name="annee" id="annee" min="2000" max="2022" required />
                             </p>
                         </div>
@@ -268,33 +268,33 @@
                         <legend>Lequel de ces monuments est un mausolée?</legend>
                         <ul class="ul_monuments rangee">
                             <li class="cols_4_de_12">
-                                <input type="radio" name="monument" id="chateauIf" value="chateauIf" required>
+                                <input type="radio" name="monument" id="chateauIf" value="chateauIf" class= "screen-reader-only" required>
                                 <label for="chateauIf">
                                     <picture>
-                                        <source media="max-width:600px" srcset="images/chateaudIf-small.jpg">
-                                        <source media="min-width:601px" srcset="images/chateaudIf.jpg">
+                                        <source media="(max-width:600px)" srcset="images/chateaudIf.jpg">
+                                        <source media="(min-width:601px)" srcset=images/chateaudIf-small.jpg>
                                         <img src="images/chateaudIf.jpg" alt="">
                                     </picture>
                                     <span>Le château d'If</span>
                                 </label>
                             </li>
                             <li class="cols_4_de_12">
-                                <input type="radio" name="monument" id="palaisLuxembourg" value="palaisLuxembourg">
+                                <input type="radio" name="monument" id="palaisLuxembourg" value="palaisLuxembourg" class= "screen-reader-only">
                                 <label for="palaisLuxembourg">
                                     <picture>
-                                        <source media="max-width:600px" srcset="images/palaisluxembourg-small.jpg">
-                                        <source media="min-width:601px" srcset="images/palaisluxembourg.jpg">
+                                        <source media="(max-width:600px)" srcset="images/palaisluxembourg.jpg">
+                                        <source media="(min-width:601px)" srcset="images/palaisluxembourg-small.jpg">
                                         <img src="images/palaisluxembourg.jpg" alt="">
                                     </picture>
                                     <span>Le palais du Luxembourg</span>
                                 </label>
                             </li>
                             <li class="cols_4_de_12">
-                                <input type="radio" name="monument" id="tajmahal" value="tajmahal">
+                                <input type="radio" name="monument" id="tajmahal" value="tajmahal" class= "screen-reader-only">
                                 <label for="tajmahal">
                                     <picture>
-                                        <source media="max-width:600px" srcset="images/tajmahal-small.jpg">
-                                        <source media="min-width:601px" srcset="images/tajmahal.jpg">
+                                        <source media="(max-width:600px)" srcset="images/tajmahal.jpg">
+                                        <source media="(min-width:601px)" srcset="images/tajmahal-small.jpg">
                                         <img src="images/tajmahal.jpg" alt="">
                                     </picture>
                                     <span>Le Taj Mahal</span>
@@ -338,6 +338,7 @@
                 </p>
             </form>
         </main>
+    </div>
         <footer>
             <p class="credits">
                 <small>© 2021, Andréanne Archambault.</small> <br>
@@ -345,7 +346,6 @@
             </p>
 
         </footer>
-    </div>
 </body>
 
 </html>
