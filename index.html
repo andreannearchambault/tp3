@@ -44,11 +44,11 @@
                     <div class="rangee prenomNom">
                         <p class="prenom">
                             <label for="prenom">Prénom</label>
-                            <input type="text" name="prenom" id="prenom" pattern="[a-zA-ZÀ-ÿ \-]+" required />
+                            <input type="text" name="prenom" id="prenom" pattern="[a-zA-ZÀ-ÿ \-]+" title="Caractères alphabétiques francais seulement" required>
                         </p>
                         <p class="nom">
                             <label for="nom">Nom</label>
-                            <input type="text" name="nom" id="nom" pattern="[a-zA-ZÀ-ÿ \-]+" required />
+                            <input type="text" name="nom" id="nom" pattern="[a-zA-ZÀ-ÿ \-]+" title="Caractères alphabétiques francais seulement" required />
 
                         </p>
                         <p class="erreur">
@@ -173,7 +173,7 @@
                     <p>
                         <label for="codePostal">Code postal (X1X 1X1)</label>
                         <input type="text" name="codePostal" id="codePostal"
-                            pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required />
+                            pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" title="Chaîne de six caractères comportant 3 caractères alphanumériques francais et 3 nombres" required />
                     </p>
                     <p class="erreur">
                         <span>
@@ -226,7 +226,7 @@
                     <div class="rangee">
                         <p class="jour">
                             <label for="jour">JOUR</label>
-                            <input type="number" name="jour" id="jour" min="1" max="31" maxlength="2" required />
+                            <input type="number" name="jour" id="jour" min="1" max="31" required />
                         </p>
                         <p class="mois">
                             <label for="mois">MOIS</label>
@@ -248,7 +248,7 @@
                         </p>
                         <p class="annee">
                             <label for="annee">ANNÉE</label>
-                            <input type="number" name="annee" id="annee" min="1000" max="9999" required />
+                            <input type="number" name="annee" id="annee" min="2000" max="2022" required />
                         </p>
                     </div>
                     <p class="erreur">
@@ -270,7 +270,7 @@
                                     <source media="min-width:601px" srcset="images/chateaudIf.jpg">
                                     <img src="images/chateaudIf.jpg" alt="">
                                 </picture>
-                                <p>Le château d'If</p>
+                                <span>Le château d'If</span>
                             </label>
                         </li>
                         <li>
@@ -281,7 +281,7 @@
                                     <source media="min-width:601px" srcset="images/palaisluxembourg.jpg">
                                     <img src="images/palaisluxembourg.jpg" alt="">
                                 </picture>
-                                <p>Le palais du Luxembourg</p>
+                                <span>Le palais du Luxembourg</span>
                             </label>
                         </li>
                         <li>
@@ -292,7 +292,7 @@
                                     <source media="min-width:601px" srcset="images/tajmahal.jpg">
                                     <img src="images/tajmahal.jpg" alt="">
                                 </picture>
-                                <p>Le Taj Mahal</p>
+                                <span>Le Taj Mahal</span>
                             </label>
                         </li>
                     </ul>
