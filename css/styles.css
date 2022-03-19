@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @author Andréanne courriel
  *
  * TABLE DES MATIERES
  * Normalize
@@ -19,19 +19,19 @@
 
 /* Normalize
    ========================================================================== */
-@import url(_normalize.css);
+@import url(normalize.css);
 
 /* Utilitaires
    ========================================================================== */
-@import url(_utilitaires.css);
+@import url(utilitaires.css);
 
 /* Charte typographique
    ========================================================================== */
-@import url(tp3_typo.css);
+@import url(typo.css);
 
 /* Grille
    ========================================================================== */
-@import url(_grille.css);
+@import url(grille.css);
 
 /* Mise en page
    ========================================================================== */
@@ -118,10 +118,15 @@ button {
 input[type=radio]+label img{
    filter: grayscale(1);
 }
+input[type=radio]+label{
+   display: inline-block;
+   padding: 5px;
+}
 input[type=radio]:checked+label{
    outline: #349194 auto 5px;
 }
-input[type=radio]:hover+label img, input[type=radio]:focus+label img {
+input[type=radio]:hover+label img,
+input[type=radio]:focus+label img {
    filter:  grayscale(0);
    cursor: pointer;
 }
